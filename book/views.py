@@ -21,3 +21,6 @@ def publisher_detail(request, publisher_id):
 def book(request):
     return HttpResponse('图书')
 
+
+def book_list(request):
+    return HttpResponse('图书列表')

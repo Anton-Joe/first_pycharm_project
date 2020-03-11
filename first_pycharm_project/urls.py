@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.http import HttpResponse
 from book import views
 from movie.views import movie
@@ -29,11 +29,13 @@ urlpatterns = [
     # http://127.0.0.1:8000
     path('', index),
     # http://127.0.0.1:8000/book/
-    path('book/', views.book),
+    # path('book/', views.book),
     # http://127.0.0.1:8000/movie
     path('movie/', movie),
     # http://127.0.0.1:8000/book/
-    path('book/detail/<book_id>/<category_id>', views.book_detail),
-    path('book/author/', views.author_detail),
-    path('book/publisher/<int:publisher_id>', views.publisher_detail)
+    # path('book/detail/<book_id>/<category_id>', views.book_detail),
+    # path('book/author/', views.author_detail),
+    # path('book/publisher/<int:publisher_id>', views.publisher_detail)
+
+    path('book/', include('book.urls'))
 ]
