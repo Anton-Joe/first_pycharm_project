@@ -33,5 +33,5 @@ urlpatterns = [
     # http://127.0.0.1:8000/movie
     path('movie/', movie),
     # http://127.0.0.1:8000/book/
-    path('book/detail/<book_id>/', views.book_detail)
+    path('book/detail/<book_id>/<category_id>', views.book_detail)
 ]
