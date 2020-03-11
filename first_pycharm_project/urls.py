@@ -18,7 +18,7 @@ from django.urls import path
 from django.http import HttpResponse
 from book import views
 from movie.views import movie
-
+from django.urls import converters
 
 def index(request):
     return HttpResponse('首页')
@@ -33,5 +33,7 @@ urlpatterns = [
     # http://127.0.0.1:8000/movie
     path('movie/', movie),
     # http://127.0.0.1:8000/book/
-    path('book/detail/<book_id>/<category_id>', views.book_detail)
+    path('book/detail/<book_id>/<category_id>', views.book_detail),
+    path('book/author/', views.author_detail),
+    path('book/publisher/<int:publisher_id>', views.publisher_detail)
 ]

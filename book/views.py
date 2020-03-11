@@ -7,5 +7,17 @@ def book_detail(request, book_id, category_id):
     return HttpResponse(text)
 
 
+def author_detail(request):
+    author_id = request.GET['id']
+    text = "作者的id是{id}".format(id=author_id)
+    return HttpResponse(text)
+
+
+def publisher_detail(request, publisher_id):
+    text = "出版社的id是{id}".format(id=publisher_id)
+    return HttpResponse(text)
+
+
 def book(request):
     return HttpResponse('图书')
+
