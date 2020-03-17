@@ -40,5 +40,6 @@ urlpatterns = [
     path('front', include('front.urls')),
 
     path('book', include('book.urls')),
-    path('practice', include('practiceApp.urls'))
+    path('practice', include('practiceApp.urls')),
+    path('cms', include('cms.urls'))
 ]
