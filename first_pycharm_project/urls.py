@@ -41,5 +41,7 @@ urlpatterns = [
 
     path('book', include('book.urls')),
     path('practice', include('practiceApp.urls')),
-    path('cms', include('cms.urls'))
+    path('cms1', include('cms.urls', namespace='cms1')),
+    path('cms2', include('cms.urls', namespace='cms2'))
+
 ]
