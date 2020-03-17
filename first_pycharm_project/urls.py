@@ -39,5 +39,6 @@ urlpatterns = [
 
     path('front', include('front.urls')),
 
-    path('book', include('book.urls'))
+    path('book', include('book.urls')),
+    path('practice', include('practiceApp.urls'))
 ]
